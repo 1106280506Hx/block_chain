@@ -1,0 +1,11 @@
+.project_progress{
+    border-radius: 10px;
+}
+
+.ant-progress-outer{
+    margin-right: 10px;
+}
+
+.ant-progress{
+    margin-right: 50px;
+}

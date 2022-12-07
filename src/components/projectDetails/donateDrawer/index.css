@@ -1,0 +1,25 @@
+.ant-btn, ant-btn-primary{
+    color: rgb(255, 255, 255);
+    background-color: #51c4eb;
+    position: 'abslute';
+}
+
+
+.button {
+    background-color: #51c4eb; /* Green */
+    border: none;
+    color: white;
+    padding: 1px 40px;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+.location{
+    text-align: center;
+}
+
+.drawer{
+    text-align: center;
+}

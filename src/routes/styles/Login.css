@@ -1,0 +1,47 @@
+.block_log_onBlock {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  padding: 15spx;
+  margin: 0 -13%;
+  background-image: url(https://img2.baidu.com/it/u=3057331496,907213536&fm=253&fmt=auto&app=138&f=JPEG?w=718&h=400) !important;
+}
+
+/* https://images.pexels.com/photos/10349674/pexels-photo-10349674.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load */
+
+
+/* .appPages{
+  margin: 0 0 0 0!important;
+} */
+
+.loginForm {
+  width: 40vw;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  background-color: transparent !important;
+  transform: translate(-50%, -50%);
+}
+.LoginInput {
+  border-radius: 6px;
+  margin-top: 3px;
+}
+.loginSubmit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.record_button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.center{
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}

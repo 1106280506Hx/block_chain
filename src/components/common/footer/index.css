@@ -1,0 +1,58 @@
+.ant-layout-footer {
+  background: rgb(205, 221, 225) !important;
+  margin-top: 8px;
+  color: #fff !important;
+  padding: 20px 0 !important;
+  text-align: center;
+}
+
+
+
+.footer .logo {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.footer .fas {
+  color: #1890ff;
+  font-size: 28px;
+  margin: 0 5px 0 0;
+}
+
+.footer .logo a {
+  color: #fff;
+}
+
+.footer .socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 24px;
+}
+
+.footer .socials li {
+  margin: 0 20px;
+}
+
+.footer .socials a {
+  color: #fff;
+}
+
+.footer .socials a:hover {
+  color: #1890ff;
+}
+
+.footer .goTop:hover {
+  opacity: 0.7;
+}
+
+.mobileVisible {
+  display: none;
+}
+
+.mobileHidden {
+  display: block;
+}

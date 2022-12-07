@@ -1,0 +1,34 @@
+.introduction_container {
+    display: flex;
+    margin: 20px;
+    background-image: url(https://ts1.cn.mm.bing.net/th/id/R-C.34ed538c8acba8be8b60accbad0b20f1?rik=CEEdozdXAdMOuw&riu=http%3a%2f%2fi1.img.969g.com%2fdown%2fimgx2014%2f12%2f22%2f289_093448_81ea8.jpg&ehk=OYBUuK5MsmiDsIm%2biSARVx%2bD4KBQ10zBEZ4LF6OTIw8%3d&risl=&pid=ImgRaw&r=0) !important;
+    /* filter: blur(2px); */
+}
+
+.introduction_container .introduction_desc {
+    padding: 50px;
+    background-color: #ffffff20;
+    backdrop-filter: blur(10px);
+}
+.introduction_sider {
+    flex: 0.6;
+}
+
+.introduction_sider img {
+    width: 128rem;
+}
+/* 这样是只有他一个，等我找找滚动条的东西 */
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: transparent;
+  }
+  
+/* 滚动滑块 */
+  ::-webkit-scrollbar-thumb {
+    background-color: #33333380;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #667;
+  }

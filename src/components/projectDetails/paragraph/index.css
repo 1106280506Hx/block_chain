@@ -1,0 +1,13 @@
+
+.project_title{
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.project_paragraph{
+    text-indent:50px;
+    max-width: 100%;
+    word-break:  break-all;
+}

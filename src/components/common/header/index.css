@@ -1,0 +1,62 @@
+.active {
+    color: #333;
+    background-color: #eee;
+    border-radius: 6px;
+}
+
+.container-fluid {
+    position: sticky;
+    top: 0;
+    transition: all .3s;
+}
+
+.list-group-item {
+    padding: 10px 15px;
+}
+
+.list-group-item:hover {
+    color: #333;
+    background-color: #dedede;
+    border-radius: 6px;
+}
+
+.ant-layout-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+  
+  .header .logo {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  
+  .header .logo .fas {
+    color: #1890ff;
+    margin: 0 5px 0 0;
+    font-size: 28px;
+  }
+  
+  .header .logo a {
+    color: #333;
+  }
+  
+  .header .menuList a {
+    color: #888;
+  }
+  
+/* 覆盖layout的header样式 */
+  .layout_myHeader {
+    background-color: #ffffff90 !important;
+    backdrop-filter: blur(7px);
+  }
+  

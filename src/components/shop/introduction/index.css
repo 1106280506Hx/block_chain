@@ -1,0 +1,23 @@
+.introduction_container {
+    display: flex;
+    margin: 20px;
+    background-image: url(https://img0.baidu.com/it/u=2365023090,1094084000&fm=253&fmt=auto&app=138&f=JPEG?w=499&h=321) !important;
+    /* filter: blur(2px); */
+    
+}
+
+.introduction_container .introduction_desc {
+    padding: 50px;
+    background-color: #ffffff20;
+    backdrop-filter: blur(10px);
+}
+.introduction_sider {
+    flex: 0.6;
+}
+
+.introduction_sider img {
+    width: 128rem;
+}
+.introduction_para{
+    text-indent:40px;
+}
