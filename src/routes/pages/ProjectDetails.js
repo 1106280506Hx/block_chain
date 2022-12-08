@@ -10,22 +10,9 @@ import Paragraph from "../../components/projectDetails/paragraph/";
 import ProjectProgress from "../../components/projectDetails/projectProgress/";
 import DonateDrawer from "../../components/projectDetails/donateDrawer/";
 
-import {
-  getAccessToken,
-  queryAllDcotypeAssets,
-  getAsset,
-} from "../../api/method/server.js";
+import { getAccessToken, queryAllDcotypeAssets, getAsset } from "../../api/method/server.js";
 
 const admin = "Evan Ford";
-// eslint-disable-next-line no-unused-vars
-const adminId = 99;
-// eslint-disable-next-line no-unused-vars
-const pwd = "testmark";
-// eslint-disable-next-line no-unused-vars
-const appkey =
-  "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzMsIm5hbWUiOiJBZnJpY2FuIFdpbGQgRG9n4oCZcyBhcHAiLCJ1cmwiOiJodHRwOi8vanVqLmF6L2VkIiwib3duZXIiOjk5LCJpc3N1ZVRpbWUiOjE2Njg0MjkyMzYyMDd9.wo5ru30FLEW9DHbo3f419IMfEbsnoQJhHyZlApgOjVQ";
-// eslint-disable-next-line no-unused-vars
-const org = "spicefactory";
 
 const doctype = "charitydemo";
 

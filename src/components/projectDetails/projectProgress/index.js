@@ -11,11 +11,7 @@ function ProjectProgress(props) {
       <div>
         <Card className="project_progress">
           <span>项目进度：</span>
-          <Progress
-            percent={Math.floor(progress)}
-            status="active"
-            style={{ marginRight: "20px" }}
-          />
+          <Progress percent={Math.floor((present / aim) * 100)} status="active" style={{ marginRight: "20px" }} />
         </Card>
       </div>
 
@@ -40,8 +36,7 @@ function ProjectProgress(props) {
               2022-3-29
             </Timeline.Item>
             <Timeline.Item>
-              截止2022年3月22日14：30，项目在布吉岛平台上线以来共筹集捐款7840.83元。针平台3月12日启动紧急救助响应机制，成立专项工作小组。
-              2022-3-22
+              截止2022年3月22日14：30，项目在布吉岛平台上线以来共筹集捐款7840.83元。针平台3月12日启动紧急救助响应机制，成立专项工作小组。 2022-3-22
             </Timeline.Item>
           </Timeline>
         </div>

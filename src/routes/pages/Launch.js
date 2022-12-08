@@ -1,24 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { getAccessToken, createAsset } from "../../api/method/server.js";
 
-import {
-  Form,
-  Input,
-  Button,
-  message,
-  Cascader,
-  DatePicker,
-  InputNumber,
-  Upload,
-  Typography,
-} from "antd";
+import { Form, Input, Button, message, Cascader, DatePicker, InputNumber, Upload, Typography } from "antd";
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 const { Title } = Typography;
 
 const admin = "Evan Ford";
-
 const doctype = "charitydemo";
+
+let userData = JSON.parse(window.localStorage.getItem("user")) || {};
+const userId = userData && userData.id ? userData.id : null;
+const token = userData && userData.token ? userData.token : null;
 
 const UploadProject = async (values) => {
   //将UI表单拿到的values处理成标准的项目obj
@@ -26,8 +20,7 @@ const UploadProject = async (values) => {
   const imgList = [];
   const imgListDefault = [
     {
-      thumbUrl:
-        "https://img1.baidu.com/it/u=4234325487,282886408&fm=253&fmt=auto&app=138&f=JPEG?w=236&h=238",
+      thumbUrl: "https://img1.baidu.com/it/u=4234325487,282886408&fm=253&fmt=auto&app=138&f=JPEG?w=236&h=238",
     },
   ];
   (values.upload ?? imgListDefault).forEach((item, index) => {
@@ -44,6 +37,8 @@ const UploadProject = async (values) => {
     paragraph: values.projectParagraph,
     status: UNDERPLANNING,
     imgList,
+    filingNo: "53100000500009167KA21008",
+    owner: userId,
   };
   console.log(asset);
 
@@ -51,9 +46,7 @@ const UploadProject = async (values) => {
 
   console.log(`try to create a new asset`);
   let ledgerInfo = await createAsset(token, doctype, asset);
-  console.log(
-    `create new asset succeed!! \n ${JSON.stringify(ledgerInfo, null, 4)}`
-  );
+  console.log(`create new asset succeed!! \n ${JSON.stringify(ledgerInfo, null, 4)}`);
   message.success("创建成功");
 };
 
@@ -97,13 +90,21 @@ function Launch() {
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
+  const navigate = useNavigate();
+  useEffect(() => {
+    userData = JSON.parse(window.localStorage.getItem("user")) || {};
+    if (!userData.id) {
+      navigate("/login");
+    }
+    const { ownedProject, involvedProject } = userData;
+    console.log("listttt:::", ownedProject, involvedProject);
+
+    window.scrollTo(0, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); //wdnmdReact,wrnm
 
   return (
-    <div
-      id="contact"
-      className="block contactBlock"
-      style={{ marginLeft: "5%", marginRight: "15%" }}
-    >
+    <div id="contact" className="block contactBlock" style={{ marginLeft: "5%", marginRight: "15%" }}>
       <div className="container-fluid">
         <div className="titleHolder"></div>
         <Form
@@ -151,20 +152,11 @@ function Launch() {
           <Form.Item label="志愿者人数" name="volunteerNum">
             <InputNumber />
           </Form.Item>
-          <Form.Item
-            label="项目详细介绍"
-            name="projectParagraph"
-            required="true"
-          >
+          <Form.Item label="项目详细介绍" name="projectParagraph" required="true">
             <TextArea rows={4} />
           </Form.Item>
 
-          <Form.Item
-            name="upload"
-            label="上传图片"
-            valuePropName="fileList"
-            getValueFromEvent={normFile}
-          >
+          <Form.Item name="upload" label="上传图片" valuePropName="fileList" getValueFromEvent={normFile}>
             <Upload name="logo" action="/upload.do" listType="picture">
               <Button>点击上传</Button>
             </Upload>

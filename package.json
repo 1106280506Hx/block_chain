@@ -18,9 +18,7 @@
     "react-highlight-words": "^0.18.0",
     "react-router-dom": "^6.4.3",
     "react-scripts": "3.4.1"
-    
   },
- 
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
